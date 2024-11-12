@@ -1,4 +1,8 @@
 #pragma once
+#include <DirectXMath.h>
+#include <math.h>
+#include "extra.hpp"
+#include <iostream>
 
 class Vector3D
 {

@@ -1,6 +1,8 @@
 #ifndef EXTRA_HPP
 #define EXTRA_HPP
 #include <stdint.h>
+#include <limits>
+#include <cmath>
 
 /// <summary>
 /// Less acurate but faster square root algorithm

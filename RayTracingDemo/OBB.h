@@ -3,12 +3,17 @@
 #include "Shape.h"
 #include "Vector3D.h"
 #include "Ray.h"
+#include "extra.hpp"
+
+
 
 class OBB : public Shape
 {
 private:
 	// Add member variables and helper functions as you see fit
-
+	Vector3D u, v, w;
+	Vector3D centerPoint;
+	double width, height, depth;
 public:
 	// colour: Shape colour
 	// centerPoint: Point at which the OBB center lies

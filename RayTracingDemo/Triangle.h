@@ -8,7 +8,9 @@ class Triangle : public Shape
 {
 private:
 	// Add member variables and helper functions as you see fit
-
+	Vector3D point1;
+	Vector3D point2;
+	Vector3D point3;
 public:
 	// colour: Shape colour
 	// p0: One of the three points the triangle consists of
