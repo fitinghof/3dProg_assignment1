@@ -7,6 +7,9 @@
 class Plane : public Shape
 {
 private:
+	Vector3D point;
+	Vector3D normal;
+
 	// Add member variables and helper functions as you see fit
 
 public:
