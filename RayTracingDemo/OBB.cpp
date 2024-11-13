@@ -6,8 +6,6 @@ OBB::OBB(const Vector3D& colour, const Vector3D& centerPoint,
 	: Shape(colour), centerPoint(centerPoint), u(u), v(v), w(w),
 	width(width), height(height), depth(depth)
 {
-
-
 	this->u.Normalize();
 	this->v.Normalize();
 	this->w.Normalize();
@@ -26,8 +24,8 @@ bool OBB::Intersection(const Ray& ray, double& t)
 	for (int i = 0; i < 3; i++)
 	{
 		Vector3D* angleVector = angleVectors[i];
-		double angleVecDotRayToOBB = *angleVector * rayToOBB;
-		double angleVecDotRayDir = *angleVector * ray.direction; 
+		double angleVecDotRayToOBB = *angleVector * rayToOBB; // e
+		double angleVecDotRayDir = *angleVector * ray.direction; // f
 
 		// ray not parallel to slab
 		if (!aproxEqual(angleVecDotRayDir, 0, 0.001)) {
@@ -41,6 +39,7 @@ bool OBB::Intersection(const Ray& ray, double& t)
 			// update far and close intersections to match furthes / closest intersection
 			if (currentCloseIntersection > closeIntersection)
 				closeIntersection = currentCloseIntersection;
+
 			if (currentFarIntersection < farIntersection)
 				farIntersection = currentFarIntersection;
 

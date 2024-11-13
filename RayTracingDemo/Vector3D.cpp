@@ -57,7 +57,7 @@ void Vector3D::Normalize()
 {
 	static const double epsilon = 0.0001;
 	double length = this->Length();
-	if (fabs(length - epsilon) < epsilon) return;
+	if (aproxEqual(length, 0, 0.001)) return;
 	this->x *= 1 / length;
 	this->y *= 1 / length;
 	this->z *= 1 / length;
