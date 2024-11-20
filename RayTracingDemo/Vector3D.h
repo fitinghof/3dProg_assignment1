@@ -4,6 +4,12 @@
 #include "extra.hpp"
 #include <iostream>
 
+struct Rotation {
+    float z = 0;
+    float y = 0;
+    float x = 0;
+};
+
 class Vector3D
 {
 private:
@@ -32,6 +38,12 @@ public:
 	double GetY() const;
 	double GetZ() const;
 
+		void SetX(double value);
+        void SetY(double value);
+        void SetZ(double value);
+
 	double Length() const; // Return the length of the vector
 	void Normalize(); // Normalize the vector
+
+	void rotate(float z, float y, float x);
 };

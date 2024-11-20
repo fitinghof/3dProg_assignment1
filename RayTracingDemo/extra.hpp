@@ -4,6 +4,10 @@
 #include <limits>
 #include <cmath>
 
+#include "Vector3D.h"
+
+static const double PI = 3.14159265358979323846;
+
 /// <summary>
 /// Less acurate but faster square root algorithm
 /// </summary>
@@ -27,7 +31,9 @@ inline float fastSqrt(float number) {
 }
 
 inline bool aproxEqual(double left, double right, double errorMargin) {
-    return fabs(left - right) < errorMargin;
+    return std::abs(left - right) < errorMargin;
 }
+
+
 
 #endif // !EXTRA_HPP
